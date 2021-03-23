@@ -1,0 +1,35 @@
+<html>
+
+    <head>
+        <style type="text/css">
+         .hide{
+             display: none;
+         }
+         .show{
+             display: block;
+         }
+        </style>
+        <script type="text/javascript">
+      
+
+function changeCOlor(type){
+    var ele = document.getElementById("div_bg");
+    if(type == "hide"){
+        ele.classList.add("hide");
+    }else if(type == "show"){
+        ele.classList.remove("hide");
+    }
+}
+   </script>
+    </head>
+    <body>
+
+        <div id="div_bg">Sample content</div>
+        <input type="button" onclick="changeCOlor('hide')" value="Hide the element"/>
+        
+        <input type="button" onclick="changeCOlor('show')" value="Show the element"/>
+    </body>
+
+
+
+</html>

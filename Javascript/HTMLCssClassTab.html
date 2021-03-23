@@ -1,0 +1,69 @@
+<html>
+
+    <head>
+        <style type="text/css">
+        #tab-btn.tab1   .btn1{
+                background-color: red;
+        }
+        #tab-btn.tab2   .btn2{
+                background-color: red;
+        }
+        #tab-btn.tab3  .btn3{
+                background-color: red;
+        }
+
+        #tab-content  > div{
+            display: none;
+        }
+        #tab-content.tab1 .tab1{
+            display: block;
+        }
+        #tab-content.tab2 .tab2{
+            display: block;
+        }
+        #tab-content.tab3 .tab3{
+            display: block;
+        }
+         
+         
+        </style>
+        <script type="text/javascript">
+      
+
+function selectTab(tabNumber){
+    var tabBtn = document.getElementById("tab-btn");
+    var tabContent = document.getElementById("tab-content");
+    tabBtn.classList.remove("tab1","tab2","tab3");
+    tabContent.classList.remove("tab1","tab2","tab3");
+        if(tabNumber ==1){
+            tabBtn.classList.add("tab1");
+            tabContent.classList.add("tab1");
+        }if(tabNumber ==2){
+            tabBtn.classList.add("tab2");
+            tabContent.classList.add("tab2");
+        }if(tabNumber ==3){
+            tabBtn.classList.add("tab3");
+            tabContent.classList.add("tab3");
+        }
+}
+   </script>
+    </head>
+    <body>
+<div class="tab1" id="tab-btn">
+    <input type="button" class="btn1" value="Tab1"  onclick="selectTab(1)" />
+    <input type="button" value="Tab2"  class="btn2"   onclick="selectTab(2)"/>
+    <input type="button" value="Tab3"   class="btn3" onclick="selectTab(3)"/>
+</div>
+<div class="tab1" id="tab-content">
+    <div class="tab1">Tab 1 Content</div>
+    <div class="tab2">Tab 2 Content</div>
+    <div class="tab3">Tab 3 Content</div>
+
+
+</div>
+       
+    </body>
+
+
+
+</html>

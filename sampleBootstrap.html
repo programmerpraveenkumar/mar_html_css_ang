@@ -1,0 +1,127 @@
+<html>
+
+    <head>
+       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+   <style>
+.header{
+    background-color: red;;
+    overflow: hidden;
+}
+.left-menu{
+    background-color: blue;
+}
+.right-content{
+ background-color: yellow;
+}
+.footer{
+    background-color: blueviolet;
+}
+.content-page{
+    height: 250px;;
+}
+.logo{
+    width: 10%;
+    height: 70px;;
+}
+.logo img{
+    width: 100%;;
+    border-radius: 20px;;
+}
+.user-details .logout-wrap{
+    float: right;
+    margin-top: 10px;
+    color:#fff;
+}
+.hor-menu{
+    float: left;
+    margin: 10px 0;
+}
+.hor-menu ul li{
+ display: inline-block;
+ margin: 0 10px;
+}
+.logout-text{
+    color: cadetblue;
+}
+
+.logout-text:hover{
+    color: #fff;;
+    text-decoration: none;
+}
+.left-menu li{
+    list-style: none;
+}
+.hor-menu ul li a ,.left-menu li a {
+    color: #000;
+}
+
+.hor-menu ul li a:hover, .left-menu li a:hover {
+    color: #f53900;
+}
+    </style>
+    </head>
+    <body>
+        <!-- header start -->
+        <div class="container">
+            <div class=" header row">
+              <div class="col-6">
+                  <div class="logo"><img src="logo.jpeg"/></div>
+                
+              </div>
+              <div class="user-details col-6">
+                  <div class="hor-menu">
+                    <ul>
+                        <li><a href="#" class="">Home</a></li>
+                        <li><a  href="#"class="">About</a></li>
+                        <li><a  href="#"class="">Contact</a></li>
+                        <li><a  href="#" class="">Gallery</a></li>
+                    </ul>  
+                  </div>
+                  <div class="logout-wrap">
+                    <div>
+                        Welcome User
+                    </div>
+                    <div>
+                      <a class="logout-text" href="#">Logout</a> 
+                    </div>
+                  </div>
+                
+              
+            </div>
+             
+            </div>
+          </div>
+          <!-- header end -->
+          <!-- container -->
+        <div class="content-page container">
+            <div class="row">
+                <!-- left menu start -->
+              <div class="left-menu col-4">
+                   <ul>
+                       <li><a href="#" class="">Home</a></li>
+                       <li><a  href="#"class="">About</a></li>
+                       <li><a  href="#"class="">Contact</a></li>
+                       <li><a  href="#" class="">Gallery</a></li>
+                   </ul>                    
+              </div>
+              <!-- left menu end -->
+              <!-- right content start -->
+              <div class="right-content col-8">
+                    right content..
+              </div>
+             <!-- right content end -->
+            </div>
+          </div>
+            <!-- footer start -->
+        <div class="container">
+            <div class=" footer row">
+              <div class="col">
+               Footer sample
+              </div>
+             
+            </div>
+          </div>
+          <!-- footer end -->
+    </body>
+
+</html>

@@ -1,0 +1,29 @@
+
+body{
+    height: 1000px;;
+    /* background-color: red; */
+}
+      .position_fixed{
+          /* scroll wont impact. */
+          position: fixed;
+          top:90px;
+          right: 50px;;
+      }
+      .position_abs{
+          /* 1.measure will get from the window: .;
+            2.if any of the  parent  has posistion property(relative,etc..)..
+            it will align from there
+           */
+        position: absolute;
+          top:50px;
+          right: 50px;;
+          background-color: blanchedalmond;
+      }
+      .pos_parent{
+          position: relative;
+          background-color: blueviolet;
+      }
+      .transparent{
+        background-color: brown;
+        opacity: 0.5;
+      }

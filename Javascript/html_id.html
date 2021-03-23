@@ -1,0 +1,49 @@
+<html>
+
+    <head>
+        <script type="text/javascript">
+        /*
+        input,select,checkbox,radio->value
+        div,p,h1,span->innerHTML
+        */
+
+        /*
+            JS events
+
+            onclick
+            onchange->select
+            onblur->when focus leaves
+            onfocus
+            onkeypress
+        */
+function forBtnClick(){
+    console.log("for button click");
+    //alert("this is for button alert")
+    //console.log(confirm("are you in chennai...?"));
+    console.log(prompt("what is your name...?"));
+}
+function selectChange(){
+    var val = document.getElementById("select_drop_down").value;
+    console.log(val);
+}
+/*
+
+alert():void->showing the alert with ok button
+confirm():boolean->showing the alert with ok and cancel button
+prompt():string->showing the alert with input
+**/
+        </script>
+    </head>
+
+</body>
+
+<div id="sample_div">
+    this is inside div.
+</div>
+<input type="text" placeholder="enter name" id="name"/>
+<input type="button" value="Click me " onclick="forBtnClick()"/>
+<select id="select_drop_down" onchange="selectChange()">
+    <option value="asdfsaf">One</option>
+    <option  value="12312312">Two</option>
+</select>
+</html>

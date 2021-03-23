@@ -1,0 +1,41 @@
+<html>
+
+    <head>
+        <style type="text/css">
+         .red{
+             background-color: red;;
+             font-size: 25px;;
+         }
+        </style>
+        <script type="text/javascript">
+      
+function addRedcolor(){
+    changeCOlor("add");
+    //document.getElementById("div_bg").classList.add("")
+}
+function removeRedcolor(){
+    changeCOlor("remove")
+    
+    //document.getElementById("div_bg").classList.add("")
+}
+function changeCOlor(type){
+    var ele = document.getElementById("div_bg");
+    if(type == "add"){
+        ele.classList.add("red");
+    }else if(type == "remove"){
+        ele.classList.remove("red");
+    }
+}
+   </script>
+    </head>
+    <body>
+
+        <div id="div_bg">Sample content</div>
+        <input type="button" onclick="changeCOlor('add')" value="Add Red color"/>
+        
+        <input type="button" onclick="changeCOlor('remove')" value="Remove Red color"/>
+    </body>
+
+
+
+</html>

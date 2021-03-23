@@ -1,0 +1,34 @@
+<html>
+
+<script type="text/javascript">
+//objects creation. 
+let person = {"name":"sample name","city":"sample city","email":"sample testing for iteration.."};
+for(o in person){
+    console.log(person[o]);
+}
+console.log("----------------------------")
+//access object
+person.name//access object->sample name
+console.log(person.name);//  
+//object of array
+var personAddress={
+    "address":
+    [
+        "sample addres",
+        "address2"
+    ]
+};
+//array of objects
+var personDetails = [
+    {name:"sample name","city":"chennai","email":"sample@gmail.com"},
+    {name:"sample name1","city":"chennai1","email":"sample@gmail.com"},
+    {name:"sample name2","city":"chennai2","email":"sample@gmail.com"},
+]
+console.log(personDetails[0].name);
+console.log(personDetails[1].name);
+for(i=0;i<personDetails.length;i++){
+    console.log(personDetails[i].name+" "+personDetails[i].email);
+}
+</script>
+
+</html>

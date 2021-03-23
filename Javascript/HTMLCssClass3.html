@@ -1,0 +1,53 @@
+<html>
+
+    <head>
+        <style type="text/css">
+         .red{
+             background-color: red;;
+           
+         }
+         .green{
+             background-color: green;
+         }
+          .blue{
+             background-color: blue;;
+           
+         }
+        </style>
+        <script type="text/javascript">
+      
+function addRedcolor(){
+    changeCOlor("add");
+    //document.getElementById("div_bg").classList.add("")
+}
+function removeRedcolor(){
+    changeCOlor("remove")
+    
+    //document.getElementById("div_bg").classList.add("")
+}
+function changeCOlor(type){
+    var ele = document.getElementById("div_bg");
+    //for multiple remove..
+    ele.classList.remove("red","green","blue");
+    if(type == "red"){
+        ele.classList.add("red");
+    }else if(type == "green"){
+        ele.classList.add("green");
+    }
+    else if(type == "blue"){
+        ele.classList.add("blue");
+    }
+}
+   </script>
+    </head>
+    <body>
+
+        <div id="div_bg">Sample content</div>
+        <input type="button" onclick="changeCOlor('red')" value="Red Color"/>
+        <input type="button" onclick="changeCOlor('blue')" value="Blue color"/>
+        <input type="button" onclick="changeCOlor('green')" value="Green color"/>
+    </body>
+
+
+
+</html>
