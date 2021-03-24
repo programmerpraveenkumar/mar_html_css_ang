@@ -1,0 +1,68 @@
+<html>
+
+    <head>
+        <script type="text/javascript">
+       function validateFrom(){
+        var formOBj = document.getElementById("get_form");
+        var age_val = document.getElementById("get_age").value;
+        var name_val = document.getElementById("get_name").value;
+        var mobile_val = document.getElementById("get_mobile").value;
+        var select_city_val = document.getElementById("select_city").value;
+        
+        if(name_val == ""){
+            alert("Please enter Name");
+            return;
+        }
+        if(age_val == ""){
+                alert("Please enter age");
+                return;
+            }
+        //isNaN>is Not a Number
+        if(isNaN(age_val)){
+            alert("please enter valid age ");
+            return;
+        }
+        if(age_val.length >2){
+            alert("age should be max 99");
+            return;
+        }
+        if(mobile_val == "" || isNaN(mobile_val)){
+            alert("Please enter valid MObile");
+            return;
+        }
+        
+        if(mobile_val.length != 10){
+            alert("Mobile length should be 10");
+            return;//stop the execution
+        }
+        if(select_city_val == ""){
+            alert("Please select city");
+            return;//stop the execution
+        }
+
+        formOBj.submit();
+       }
+        </script>
+    </head>
+
+</body>
+<h1>Get </h1>
+<form id="get_form" action="http://localhost//fita/mar_php/get.php" method="GET">
+    <input id="get_name" type="text" name="name"/>
+    <input id="get_age"type="text" name="age"/>
+    <input id="get_mobile"type="text" name="mobile"/>
+    <select id="select_city" name="city">
+        <option value="">--select City--</option>
+        <option value="1">chennai</option>
+        <option value="2">Madurai</option>
+    </select>
+    <input type="button" onclick="validateFrom()" value="(GET)Click to submit the form"/>
+</form>
+<h1>POSt</h1>
+<form action="http://localhost//fita/mar_php/post.php" method="POST">
+    <input type="text" name="name"/>
+    <input type="text" name="age"/>
+    <input type="button" value="(POST)Click to submit the form"/>
+</form>
+</body>
+</html>
