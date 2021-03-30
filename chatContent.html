@@ -1,0 +1,73 @@
+<html>
+<style type="text/css">
+    .chat_wrapper {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    #chat_content {
+        height: 200px;
+        overflow: auto;
+        border: 1px solid;
+    }
+
+
+    .input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    span {
+        color: red;
+    }
+</style>
+<script type="text/javascript">
+    var chatContent = [];
+    function postChat() {
+        var chat_val = document.getElementById("chat_input").value;
+        var username_val = document.getElementById("username").value;
+        //show error when chat message is empty
+        if (chat_val == "") {
+            alert("please enter something..");
+            return;
+        }
+        //add chat message to global variable.
+        chatContent.push({ id="", "content": chat_val, "user": username_val });
+        //clear the chat
+        document.getElementById("chat_input").value = "";
+        //clear the username
+        document.getElementById("username").value = "";
+        loopChatContent();
+    }
+
+    function loopChatContent() {
+        var tmp = "";
+        //iterate the global array varible
+        for (chatObj in chatContent) {
+            let chatO = chatContent[chatObj]
+            //create html chat using iteration
+            tmp = tmp + "<div><span>" + chatO.user + ":</span>" + chatO.content + "</div>";
+        }
+        //inject the html array in html id
+        document.getElementById("chat_content").innerHTML = tmp;
+    }
+</script>
+
+<body>
+
+    <div class="chat_wrapper">
+        <div id="chat_content"></div>
+        <div>
+            <textarea class="input" placeholder="Enter Message" id="chat_input"></textarea>
+
+        </div>
+        <div>
+            <input class="input" placeholder="Ente Name" type="text" id="username" />
+        </div>
+        <button class="input" onclick="postChat()">Send</button>
+    </div>
+
+</body>
+
+
+</html>
