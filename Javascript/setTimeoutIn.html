@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+        
+    <script type="text/javascript">
+      //setTimeout->only one wil start and end on particual time
+      //setInterval-wil sta for every interval
+    //   setTimeout(function(){
+    //     console.log("this is time out");
+    //   }, 5000);
+    var start =0;
+     var interval  = "";//global variable
+     //starting the interval
+     function startIN(){
+         //assign the interval to global variable
+        interval =  setInterval(function(){
+         start++;
+        console.log("this is time out "+start);
+      }, 2000);
+      }
+      //clearing the interval
+      function stopIn(){
+          //clear the interval using global variable.
+        clearInterval(interval);
+      }
+      //clearInterval
+   </script>
+    </head>
+    <body>
+
+        <input type="button" onclick="startIN()" value="start Interval"/>
+        <input type="button" onclick="stopIn()" value="stop Interval"/>
+        
+    </body>
+
+
+
+</html>
