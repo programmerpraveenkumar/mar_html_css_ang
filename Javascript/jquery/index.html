@@ -1,0 +1,88 @@
+
+<html>
+    <head>
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+        <script>
+            function clickme(){
+                $("#div").html("updated from jquery");
+            }
+            function validateFORM(formType){
+                if(formType == "login"){
+                    var form_obj = $("#login_form");
+                    var email = form_obj.find(".email").val();
+                    var pwd =form_obj.find(".password").val();
+                     if(email == ""){
+                        showError('login',"Email shud not be empty");
+                    }else if(pwd ==""){
+                        showError('login',"pwd shud not be empty");
+                    }else{ 
+                        showError('login',"REady to Login form submit");
+                    }
+                }else if(formType == "register"){
+                    var form_obj = $("#register_form");
+                   
+                    var name = form_obj.find(".name").val();
+                    var email = form_obj.find(".email").val();
+                    var mobile = form_obj.find(".mobile").val();
+                    if(name == "" || name == undefined){
+                        showError('register',"name shud not be empty")
+                    }else if(email == ""|| email == undefined){
+                        showError('register',"Email shud not be empty")
+                    }else if(mobile ==""|| mobile == undefined){
+                        showError('register',"Mobile shud not be empty")
+                    }else{
+                        console.log("REady to submit Register");
+                        showError('register',"")
+                    }
+                }
+                
+            }
+            function showError(type,message){
+                if(type == "login"){
+                    $("#login_error").html(message);
+                }else{
+                    $("#register_error").html(message);
+                }
+              
+                
+            }
+            function validateField(type){
+                var formObj = $("#register_form");
+                if(type == "name"){
+                   let name =  formObj.find(".name").val();
+                    if(name == "" || name == undefined){
+                        showError('register',"name shud not be empty");
+                        formObj.find(".name").focus();
+                    }
+                }
+            }
+        </script>
+        <!-- undefined -->
+    </head>
+  
+    <body>
+
+        <div id="div">
+            sample content
+        </div>
+        <button onclick="clickme()">Click me</button>
+        <form id="register_form">
+            <h1>Register Form</h1>
+            <span id="register_error"></span>
+            <input id="register_form_name"   class="name" type="text" placeholder="Enter name"/>
+            <input onblur="validateField('email')" class="email" type="text" placeholder="Enter email"/>
+            <input onblur="validateField('mobile')" class="mobile" type="text" placeholder="Enter mobile"/>
+            <input type="button" onclick="validateFORM('register')" value="validate"/>
+        </form>
+        <form id="login_form">
+            <h1>Login Form</h1>
+            <span id="login_error"></span>
+            <input  class="email"   type="text" placeholder="Enter email"/>
+            <input   class="password"  type="text" placeholder="Enter Password"/>
+            <input type="button" onclick="validateFORM('login')" value="validate"/>
+        </form>
+    </body>
+</html>
