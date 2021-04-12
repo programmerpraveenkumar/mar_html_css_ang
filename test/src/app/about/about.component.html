@@ -1,0 +1,12 @@
+ 
+<button (click)="getAllTodos()">get All Todos </button>
+<div *ngFor="let todo of allTodos">
+    {{todo.id}}---{{todo.title}}
+</div>
+
+
+
+<input type="text" [(ngModel)]="userJob" />
+<button (click)="createUSER()">Create User</button>
+<button (click)="messageAlert()">Mesage alrt</button>
+<button (click)="sendMessageViaPubSub()">Mesage sendMessageViaPubSub</button>

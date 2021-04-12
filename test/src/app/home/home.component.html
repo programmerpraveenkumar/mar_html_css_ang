@@ -1,0 +1,35 @@
+
+ {{name}}
+ <h1>{{heading}}</h1>
+ <input type="text" [(ngModel)]="name1"/>
+ <input [type]="type" [(ngModel)]="name2"/><span (click)="showpassword()">Show Password</span>
+ <input type="button" value="CLick me" (click)="sampleFunction()"/> 
+ {{message}}
+ <div *ngFor="let data of people">
+     <span (click)="showName(data)">{{data.name}}</span>--{{data.age}}
+ </div>
+ <div *ngFor="let number of numbers">
+    <span>{{number }}</span> 
+</div>
+
+<div>
+    <span *ngIf="showContentText">this is the content</span> 
+    <button (click)="showContent()">Show and Hide</button>
+</div>
+
+<div [ngClass]="classlist">this is for ngclass</div>
+ <!-- <div [ngClass]="{'red':showContentText}">
+     this is for ngclass</div>  -->
+
+    <div [ngClass]="colorName">
+    check color </div> 
+     <button (click)="colorName =  'red'">RED</button>--
+     <button (click)="colorName =  'blue'">BLUE</button>
+     <button (click)="colorName =  'purple'">purple</button>
+     <div>
+        <div class="hide" [ngClass]="{'active':showHide}">
+           show Content for css hide  and show</div> 
+             <button (click)="showHide = true">show   IN css</button>--
+             <button (click)="showHide = false">Hide   IN css</button>--
+           <button (click)="showAlert()">Click to cal service</button>
+     </div>
