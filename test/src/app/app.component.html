@@ -5,4 +5,4 @@
 <!-- <app-home></app-home> -->
 <router-outlet></router-outlet>
 
-<app-footer></app-footer>
+<app-footer (sendToParent)='fromChild($event)'></app-footer>

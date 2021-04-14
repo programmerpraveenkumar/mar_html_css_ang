@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'this is app componet';
+  fromChild($event){
+    console.log("in parent ",$event);
+  }
 }

@@ -1,15 +1,21 @@
 
  {{name}}
- <h1>{{heading}}</h1>
+ <h1>{{heading | uppercase }}</h1>
  <input type="text" [(ngModel)]="name1"/>
  <input [type]="type" [(ngModel)]="name2"/><span (click)="showpassword()">Show Password</span>
  <input type="button" value="CLick me" (click)="sampleFunction()"/> 
  {{message}}
- <div *ngFor="let data of people">
-     <span (click)="showName(data)">{{data.name}}</span>--{{data.age}}
+ <div>
+    {{currentDate |   date:'medium' }}
+    <div>   {{currentDate |   date }}</div>
+ 
+ </div>
+ <input type="text" [(ngModel)]="ageValue"/>
+ <div *ngFor="let data of people | ageFilter:ageValue">
+     <span (click)="showName(data)">{{data.name}}</span>- and age is -{{data.age}}
  </div>
  <div *ngFor="let number of numbers">
-    <span>{{number }}</span> 
+    <span>{{number  | power }}</span> 
 </div>
 
 <div>

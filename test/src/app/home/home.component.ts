@@ -8,18 +8,25 @@ import { CommonService } from '../common.service';
 })
 export class HomeComponent implements OnInit {
   people = [
-    {'name':"test1",'age':12},
-    {'name':"test2",'age':13},
-    {'name':"test3",'age':14},
-    {'name':"test4",'age':15},
-    {'name':"test5",'age':16}
+    {'name':"eleven",'age':11},
+    {'name':"Ten",'age':10},
+    {'name':"nine",'age':9},
+    {'name':"a12",'age':12},
+    {'name':"thirteen",'age':13},
+    {'name':"four",'age':14},
+    {'name':"five",'age':15},
+    {'name':"fivefive",'age':55},
+    {'name':"fivefivefive",'age':555},
+    {'name':"six",'age':16}
   ];
+  ageValue:number;
   colorName="";
   numbers= [1,2,3,4,5];
   
     name = "this is from Home component variable"
     heading = "this is for h1";
     message:any = "";
+    currentDate = new Date();
     name1 = "";
     name2 = "";
     showContentText = false;

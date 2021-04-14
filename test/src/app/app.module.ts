@@ -10,6 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PowerPipe } from './power.pipe';
+import { AgeFilterPipe } from './age-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     HeaderComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    PowerPipe,
+    AgeFilterPipe
   ],
   imports: [
     BrowserModule,

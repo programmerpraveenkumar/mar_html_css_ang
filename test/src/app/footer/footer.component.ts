@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+ 
 import { CommonService } from '../common.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { CommonService } from '../common.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
+  @Output() sendToParent = new  EventEmitter();
   constructor(private commonService:CommonService) {
     this.commonService.pushMessage.subscribe(msg=>{
       console.log("in footer component",msg);
@@ -15,6 +16,10 @@ export class FooterComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+  clickToSendParent(){
+    let obj  = {"name":"person name","age":"11"};
+    this.sendToParent.emit(obj);
   }
 
 }
