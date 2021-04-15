@@ -1,0 +1,223 @@
+body {
+	background: #eee url(../images/pozadina.gif) repeat-y;
+	color:#666666;
+	font-family: Arial, Sans-Serif;
+	font-size: 70%;
+	padding: 0;
+	margin: 0 0 0 10px;
+}
+
+a {
+	color: #1480CD; 
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #808080;
+	background: #FEF7CD;
+}
+
+p {
+	margin: 0 0 5px 0; 
+	padding: 0 0 0 2px;
+	color:#666666;
+}
+
+.picture {
+	margin-top: 20px;
+	height: 90px;	
+}
+
+h3 {
+	font-size: 150%;
+	font-family: Sans-Serif, Arial;
+	letter-spacing: -1px;
+	margin: 0;
+	padding: 0;
+	color: #1480CD;
+}
+
+
+.read_more {
+	margin-top: 10px;
+	padding-top: 4px;
+	text-align: right;
+	padding-right: 9px;	
+	font-size: 90%;
+}
+
+.read_more p {
+	color: #D85C1A;	
+}
+
+#lijeva_kolona {
+	float: left;
+	width: 130px;
+	margin: 0 0 0 0;
+	padding: 15px 0;
+	background: url(../images/lijevo.gif) no-repeat top left;
+	text-align: right;
+}
+
+#lijeva_kolona p {
+	color: #FBDBCA;
+	padding-right: 10px;
+	margin: 0 0 15px 0;
+}
+
+#lijeva_kolona a, #lijeva_kolona a:visited {
+	font-family: Tahoma, Sans-Serif;
+	font-size: 90%; 
+	text-transform: uppercase;
+	font-weight:bold;
+	text-decoration: none; 
+	color:#C0901F; 
+	padding-right: 10px;
+	color: #AFD6F5;
+	display: block;	
+	text-align: right;
+	height: 17px;
+}
+
+#lijeva_kolona a:hover {
+	color: #FFF;
+	background: url(../images/link.gif) no-repeat center right;
+}
+
+#title p {
+	padding: 0 10px 3px 0;
+	margin: 0;
+	text-align: right;
+	font-size: 150%;
+	font-family: Sans-Serif;
+	letter-spacing: -1px;
+	font-weight: bold;
+	color: #FFF;
+}
+
+
+#sadrzaj {
+	width: 745px;
+	color: #333;
+	line-height: 130%;
+	padding: 0;
+}
+
+#sadrzaj h3 {
+	margin: 10px 0 5px 0;
+}
+
+
+#desna_kolona {
+	float: right;
+	margin: 3px 0 0 0px;
+	width: 180px;
+	padding: 0 8px 8px 12px;
+	height: auto;
+	background: url(../images/clanak.gif) no-repeat top left;
+}
+
+#desna_kolona h3 {
+	margin: 2px 0 5px 0;
+}
+
+#desna_kolona p {
+	color: #D55917;
+}
+	
+.desni_clanak {
+	padding: 10px;
+	background: #FEF7CD url(../images/scrap.gif) repeat-x bottom left;
+	height: auto;
+}
+
+.informacije {
+	padding: 5px 10px 5px 10px;
+	margin: 5px 0 0 0;
+	background: #fff url(../images/fade.gif) repeat-x bottom left;
+	height: auto;
+	
+}
+
+#srednja_kolona {
+	width: 392px;
+	margin-left: 145px;
+	padding: 0;
+	padding-top: 1px;
+	text-align:justify;
+}
+
+.srednji_clanak {
+	margin: 3px 0 0 3px;
+	padding: 0px 10px 10px 12px;
+	background: url(../images/../images/clanak.gif) no-repeat;
+}
+
+.clanak {
+	padding: 1px 12px 10px 10px;
+	background: #FFF url(../images/fade.gif) repeat-x bottom left;
+	height: auto;
+}
+
+.content {
+	padding:10px 0 0 0;
+}
+.content_resize {
+	margin:0 auto;
+	padding:20px 0 0 0;
+	width:970px;
+}
+.content .mainbar {
+	margin:0;
+	float:left;
+}
+.content .mainbar img {
+	float:left;
+	padding:4px;
+	margin:0 10px 0 0;
+	border:1px solid #eaecec;
+	background-color:#fff;
+}
+.content .mainbar .article {
+	margin:0 0 5px 0;
+	padding:30px 20px;
+	width:610px;
+}
+.content .mainbar .article span.butons a {
+	margin:0 5px 0 0;
+	float:right;
+	color:#9a9a9a;
+	padding:1px 10px;
+	text-decoration:none;
+	border:1px solid #ebe8e8;
+	background:#fbfbfc;
+}
+.content .mainbar .article span.butons a:hover {
+	border:1px solid #d9f0ff;
+	background:#40b5ff;
+	color:#fff;
+	text-decoration:none;
+}
+.content .mainbar .article span.butons a.active {
+	border:1px solid #ebe8e8;
+	background:#40b5ff;
+	color:#fff;
+	text-decoration:none;
+}
+.content .sidebar {
+	margin:0;
+	padding:0;
+	float:right;
+}
+.content .sidebar .gadget {
+	margin:0 0 20px 0;
+	padding:30px 20px;
+	width:230px;
+}
+ol {
+	list-style:none;
+}
+ol li {
+	display:block;
+	clear:both;
+}

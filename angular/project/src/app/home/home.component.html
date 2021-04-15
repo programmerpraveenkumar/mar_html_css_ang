@@ -1,0 +1,22 @@
+<div id="sadrzaj">
+  <h1>Sample Blog</h1>
+  <div id="desna_kolona">
+    <div class="desni_clanak">
+      <h3>Lorem Ipsum</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+    </div>
+   
+  </div>
+  <div id="srednja_kolona">
+    
+    <div *ngFor="let post of posts" class="srednji_clanak">
+      <div class="clanak">
+        <h3>{{post.title}}</h3><p>{{post.content}}</p>
+        <div class="read_more">
+          <p><a href="#">Read more</a>> Posted on: August 24th, 2005</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
