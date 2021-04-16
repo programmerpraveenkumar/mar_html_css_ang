@@ -1,0 +1,5 @@
+p.post_content{
+        width: 100%;
+    /* overflow-x: scroll; */
+    word-break: break-all;
+}

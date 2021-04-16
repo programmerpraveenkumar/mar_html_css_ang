@@ -14,15 +14,15 @@
             
             <li>
               <label for="email">Email Address (required)</label>
-              <input id="email" name="email" class="text" />
+              <input [(ngModel)]="username"  name="email" class="text" />
             </li>
             <li>
                 <label Password >Password</label>
-                <input type="password" name="email" class="text" />
+                <input  [(ngModel)]="password" type="password" name="email" class="text" />
               </li>
               <li>
              
-                <input type="button" value='Click to Login'/>
+                <input type="button" (click)="loginValidation()" value='Click to Login test'/>
               </li>
           </ol>
         </form>

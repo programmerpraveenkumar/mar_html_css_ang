@@ -1,0 +1,8 @@
+.text {
+    width: 50%;
+    margin: 10px 0;
+    height: 50px;
+}
+.text.content{
+    height: 100px;
+}

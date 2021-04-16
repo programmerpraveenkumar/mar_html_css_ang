@@ -1,0 +1,32 @@
+ 
+
+<div class="content">
+  <app-sidemenu></app-sidemenu>
+    <div class="content_resize">
+      <div class="mainbar">
+       
+ 
+       <div class="article">
+        <h2><span>Create Post</span></h2>
+        <div class="clr"></div>
+        <form action="#" method="post" id="sendemail">
+          <ol>
+            
+            <li>
+               <input placeholder="Enter Title" [(ngModel)]="title" type="text" name="title" class="text" />
+            </li>
+            <li>
+              <input  type="file" name="title" class="text" />
+           </li>
+             <li>
+                  <textarea placeholder="Enter Message" [(ngModel)]="content"  type="text" name="content" class="text content"  ></textarea>
+              </li>
+              <li> 
+                   <input type="button" (click)="postContent()" class="text "value='Click to Post'/>
+              </li>
+          </ol>
+        </form>
+      </div>
+    </div>
+</div>
+</div>

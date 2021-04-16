@@ -15,7 +15,7 @@ POSTHTTP(url,param){
   return this.http.post(APP_CONSTANTS.API_ENDPOINT+url,param);
 }
 isUserLoggedIn(){
- let val =  localStorage.getItem("user_id");
+ let val =  localStorage.getItem(APP_CONSTANTS.USER_ID_TOKEN);
  if(val == null || val == ""){
    return false;
  }else{
@@ -30,12 +30,33 @@ createPromise(){
       }, 1000);
   })
 }
-  createObservable(){ 
+  createObservable(username,password){ 
     return new Observable(res=>{
       setTimeout(function() {
-       res.next("from observable...");//success 
+        if(username == "test" && password == "pass"){
+          res.next("User Exist...");//success 
+        }else{
+          res.error("error from observable");
+        }
+      
       // res.next("from observable 2...");//success 
-     // res.error("error from observable");
+     //
+      },1500);
+    // res.error("some error");//fail
+    })
+  }
+ loginValidation(username,password){ 
+   console.log(username,password);
+    return new Observable(res=>{
+      setTimeout(function() {
+        if(username == "test" && password == "pass"){
+          res.next("User Exist...");//success 
+        }else{
+          res.error("error from observable");
+        }
+      
+      // res.next("from observable 2...");//success 
+     //
       },1500);
     // res.error("some error");//fail
     })

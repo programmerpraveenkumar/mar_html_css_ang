@@ -18,12 +18,12 @@ posts=[];
     //     this.posts = res.posts;
     // })
     if(this.cService.isUserLoggedIn()){
-      this.cService.GETHTTP("data.json").subscribe((res:any)=>{
-        this.posts = res.posts;
+      this.cService.GETHTTP("posts").subscribe((res:any)=>{
+        this.posts = res;
+        console.log(res);
     })
     }else{
       this.router.navigate(['']);//navigation to loginpage
-  
     }
    
   }
